@@ -7,7 +7,7 @@ const NavBar = () => {
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="p-4 flex items-center justify-between">
+    <nav className="p-4 flex items-center justify-between mt-4">
       {/* Logo/Name */}
       <div className="text-2xl font-bold lg:flex lg:flex-col lg:items-start lg:mr-56 ml-4 lg:ml-32">
         <a href="#" className="hover:text-gray-700">
@@ -43,13 +43,24 @@ const NavBar = () => {
           </a>
         </li>
         <li>
-          <a href="#resume" className="p-2 hover:text-gray-700">
+          <a
+            href="https://drive.google.com/file/d/1ZEgcXcSRVmbWkbVBLeFdisFsbUFMlFQh/view?usp=share_link"
+            className="p-2 hover:text-gray-700"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume
           </a>
         </li>
+
         <li>
-          <a href="#contact" className="p-2 hover:text-gray-700">
-            Contact
+          <a
+            href="https://www.linkedin.com/in/chaitanya-katore-87964921b/"
+            className="p-2 hover:text-gray-700"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
           </a>
         </li>
       </ul>

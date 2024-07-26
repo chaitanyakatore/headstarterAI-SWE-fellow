@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "./components/Home";
-import "./index.css";
-import NavBar from "./components/NavBar";
 import ProjectsSection from "./components/ProjectsSection";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
       <NavBar />
       <Home />
       <ProjectsSection />
+      <Footer />
     </div>
   );
 };

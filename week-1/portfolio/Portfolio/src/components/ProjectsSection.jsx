@@ -1,4 +1,3 @@
-// src/components/ProjectsSection.jsx
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import projectImg1 from "../assets/projectImg1.png";
@@ -12,40 +11,34 @@ const ProjectsSection = () => {
       imageSrc: projectImg1,
       title: "DocAssist",
       description:
-        "The Doctor Patient Portal is an advanced Java web project designed to facilitate efficient interactions between doctors and patients. We can book apointement mange hospital mangement system",
-      techStack: ["Java", "Spring-Boot", "SQL", "Servlet"],
-      repoLink: "https://github.com/chaitanyakatore/DocAssist",
+        "The Doctor Patient Portal is an advanced Java web project designed to managing appointments, patient records, and medical consultations. It is competely java based project",
+      techStack: ["Java", "Spring-boot", "JSP", "Serverlet", "SQL"],
     },
     {
       imageSrc: projectImg2,
       title: "RentUp",
       description:
         "Built a RentUp website with React.js, showcasing a static yet dynamic property search interface. The site features a responsive design with Bootstrap 5 and FontAwesome, providing a seamless user experience for browsing and viewing property listings.",
-      techStack: ["React", "Tailwind", "JavaScript"],
-      repoLink:
-        "https://github.com/chaitanyakatore/ReactProjects/tree/main/Real-estate-website-master",
+      techStack: ["React", "Docker", "Tailwind", "CSS"],
     },
     {
       imageSrc: projectImg3,
-      title: "Video-Stramer",
+      title: "VideoSTube",
       description:
-        "Developed a YouTube Clone using React.js that fetches real-time data for video content and search. Dockerized the app for consistent and streamlined deployment across different environments.",
-      techStack: ["React", "Docker", "API", "Tailwind"],
-      repoLink:
-        "https://github.com/chaitanyakatore/ReactProjects/tree/main/youtube_clone",
+        "Developed a YouTube Clone that fetches real-time data, replicating core features of the YouTube platform. This project uses React.js for the front end to provide dynamic video browsing and search functionalities. The application is containerized with Docker, ensuring consistent environments and easy deployment.",
+      techStack: ["React", "Docker", "API", "Tailwind", "Ci/CD"],
     },
     {
       imageSrc: projectImg4,
-      title: "Project 4",
+      title: "Expiry Tracker",
       description:
         "Created a barcode scanning app with real-time camera functionality and manual item addition features, using Firebase for authentication and MongoDB for data storage. Integrated Open Food Facts API for item information and ensured a responsive design for both mobile and desktop devices.",
-      techStack: ["React", "Express", "MongoDB", "Nodejs", "Tailwind"],
-      repoLink: "https://github.com/chaitanyakatore/ExpiryTracker-client",
+      techStack: ["React", "Express", "Nodejs", "MongoDB", "Tailwind"],
     },
   ];
 
   return (
-    <div className="p-4">
+    <section id="projects" className="p-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-gray-100">
         {projects.map((project, index) => (
           <ProjectCard
@@ -54,11 +47,10 @@ const ProjectsSection = () => {
             title={project.title}
             description={project.description}
             techStack={project.techStack}
-            repoLink={project.repoLink}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
