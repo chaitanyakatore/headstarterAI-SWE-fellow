@@ -44,7 +44,7 @@ const NavBar = () => {
         </li>
         <li>
           <a
-            href="https://drive.google.com/file/d/1ZEgcXcSRVmbWkbVBLeFdisFsbUFMlFQh/view?usp=share_link"
+            href="https://drive.google.com/file/d/1Xswgkwk55DmREBY6fNzkS7julzUi2nGb/view?usp=sharing"
             className="p-2 hover:text-gray-700"
             target="_blank"
             rel="noopener noreferrer"

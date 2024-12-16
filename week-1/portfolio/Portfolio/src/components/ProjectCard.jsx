@@ -47,7 +47,10 @@ const ProjectCard = ({ imageSrc, title, description, techStack, repoLink }) => {
             size="lg"
             fullWidth
             className="bg-gray-200 text-black hover:bg-gray-600 hover:text-white w-4/5 h-12 max-w-[200px]"
-            onClick={() => window.open(repoLink, "_blank")}
+            onClick={() => {
+              console.log(repoLink);
+              window.open(repoLink, "_blank");
+            }}
           >
             Link To Project
           </Button>
