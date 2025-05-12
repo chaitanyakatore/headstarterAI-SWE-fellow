@@ -1,59 +1,199 @@
-// src/components/ProjectCard.jsx
-import React from "react";
+import React, { useState } from "react";
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+  CodeBracketIcon,
+  EyeIcon,
+  GlobeAltIcon,
+  ArrowTopRightOnSquareIcon,
+} from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
-const ProjectCard = ({ imageSrc, title, description, techStack, repoLink }) => {
+const ProjectCard = ({
+  imageSrc,
+  title,
+  description,
+  techStack,
+  repoLink,
+  demoLink,
+  projectType,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <Card className="w-full max-w-full lg:max-w-[calc(100%-1rem)] shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
-      <div className="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
-        <CardHeader floated={false} color="blue-gray">
+    <motion.div
+      className="w-full max-w-[400px]"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
+    >
+      <div
+        className={`
+          relative 
+          h-full 
+          bg-white 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-md 
+          hover:shadow-xl 
+          transition-all 
+          duration-300 
+          border 
+          border-gray-100
+          group
+          ${isHovered ? "ring-2 ring-red-100" : ""}
+        `}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Project Type Badge */}
+        <div className="absolute top-4 right-4 z-10">
+          <span
+            className={`
+              px-3 py-1 
+              text-xs font-medium 
+              rounded-full 
+              backdrop-blur-sm
+              ${
+                projectType === "Open Source"
+                  ? "bg-green-100/80 text-green-800"
+                  : projectType === "Client Work"
+                  ? "bg-blue-100/80 text-blue-800"
+                  : "bg-gray-100/80 text-gray-800"
+              }
+            `}
+          >
+            {projectType || "Project"}
+          </span>
+        </div>
+
+        {/* Image Header with Overlay */}
+        <div className="relative h-56 overflow-hidden">
           <img
             src={imageSrc}
             alt={title}
-            className="w-full h-64 object-cover rounded-lg"
+            className={`
+              w-full h-full object-cover 
+              transition-transform duration-700 
+              ${isHovered ? "scale-105" : "scale-100"}
+            `}
           />
-        </CardHeader>
-        <CardBody className="p-6">
-          <Typography
-            variant="h5"
-            color="blue-gray"
-            className="font-bold text-xl mb-2"
+          {/* Gradient Overlay */}
+          <div
+            className={`
+              absolute inset-0 
+              bg-gradient-to-t from-black/30 to-transparent 
+              opacity-0 group-hover:opacity-100 
+              transition-opacity duration-300
+            `}
+          />
+          
+          {/* Action Buttons */}
+          <div
+            className={`
+              absolute inset-0 
+              flex items-center justify-center gap-4 
+              opacity-0 group-hover:opacity-100 
+              transition-opacity duration-300
+            `}
           >
+            {repoLink && (
+              <motion.a
+                href={repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  p-3 bg-white rounded-full shadow-lg
+                  hover:bg-gray-50 transition
+                  flex items-center gap-1
+                "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <CodeBracketIcon className="h-5 w-5 text-gray-700" />
+                <span className="text-xs font-medium">Code</span>
+              </motion.a>
+            )}
+            {demoLink && (
+              <motion.a
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  p-3 bg-white rounded-full shadow-lg
+                  hover:bg-gray-50 transition
+                  flex items-center gap-1
+                "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <GlobeAltIcon className="h-5 w-5 text-gray-700" />
+                <span className="text-xs font-medium">Live</span>
+              </motion.a>
+            )}
+          </div>
+        </div>
+
+        {/* Card Body */}
+        <div className="p-6">
+          <h3 className="
+            mb-2 text-xl font-bold text-gray-900 
+            group-hover:text-red-600 transition-colors
+          ">
             {title}
-          </Typography>
-          <Typography color="gray" className="mb-4">
+            {isHovered && (
+              <ArrowTopRightOnSquareIcon className="inline-block w-4 h-4 ml-1 text-gray-400" />
+            )}
+          </h3>
+
+          <p className="
+            mb-4 text-sm leading-relaxed text-gray-600
+            group-hover:text-gray-700 transition-colors
+          ">
             {description}
-          </Typography>
-          <div className="flex flex-wrap gap-2">
+          </p>
+
+          {/* Tech Stack Chips */}
+          <div className="flex flex-wrap gap-2 mb-6">
             {techStack.map((tech, index) => (
               <span
                 key={index}
-                className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded"
+                className="
+                  px-2.5 py-1 
+                  bg-gradient-to-br from-gray-50 to-gray-100
+                  text-gray-700 text-xs font-medium 
+                  rounded-full 
+                  border border-gray-200
+                  shadow-inner
+                "
               >
                 {tech}
               </span>
             ))}
           </div>
-        </CardBody>
-        <CardFooter className="pt-4 bg-gray-100">
-          <Button
-            size="lg"
-            fullWidth
-            className="bg-gray-200 text-black hover:bg-gray-600 hover:text-white w-4/5 h-12 max-w-[200px]"
-            onClick={() => window.open(repoLink, "_blank")}
+
+          {/* View Button */}
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="
+              w-full py-3 px-4
+              bg-gradient-to-r from-gray-50 to-gray-100
+              text-gray-800 font-medium
+              rounded-lg
+              border border-gray-200
+              shadow-sm
+              hover:shadow-md
+              transition-all
+              flex items-center justify-center gap-2
+            "
+            onClick={() => window.open(repoLink || demoLink, "_blank")}
           >
-            Link To Project
-          </Button>
-        </CardFooter>
+            <EyeIcon className="h-5 w-5" />
+            View Project
+          </motion.button>
+        </div>
       </div>
-    </Card>
+    </motion.div>
   );
 };
 
