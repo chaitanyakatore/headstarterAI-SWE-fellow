@@ -2,18 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes float {
-  0% {
-    transform: translatey(0px);
+@layer utilities {
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
-  50% {
-    transform: translatey(-10px);
-  }
-  100% {
-    transform: translatey(0px);
+
+  .animate-float {
+    animation: float 2s infinite;
   }
 }
 
-.card:hover {
-  animation: float 2s infinite;
+/* Disable all animations on mobile */
+body.is-mobile * {
+  animation: none !important;
+  transition: none !important;
 }
