@@ -63,163 +63,107 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-28 bg-gradient-to-b from-white to-gray-50">
+    <section id="projects" className="py-32 bg-off-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-20"
+          className="mb-32"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <motion.div 
-            className="inline-flex items-center justify-center p-4 mb-6 rounded-2xl bg-gradient-to-r from-red-50 to-red-100 shadow-inner"
-            whileHover={{ rotate: 5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <SparklesIcon className="h-8 w-8 text-red-600" />
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400">Works</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Explore my portfolio of innovative solutions that blend cutting-edge technology with exceptional user experiences.
-          </p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+              <p className="text-accent-red font-outfit font-medium tracking-widest uppercase mb-4">Selected Works</p>
+              <h2 className="text-5xl md:text-7xl font-fraunces font-bold text-premium-black leading-tight">
+                Featured<br/>Projects
+              </h2>
+            </div>
+            <p className="text-xl text-premium-gray font-outfit font-light max-w-md leading-relaxed">
+              A collection of digital products crafted with precision and passion.
+            </p>
+          </div>
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="space-y-32">
+        {/* Projects List */}
+        <div className="space-y-40">
           {projects.map((project, index) => (
             <motion.div 
               key={index}
               className="group relative"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8 }}
             >
-              {/* Project Card */}
-              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-start`}>
-                {/* Project Info */}
-                <div className="w-full lg:w-1/2 lg:sticky lg:top-8">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-sm font-medium px-3 py-1 rounded-full bg-gradient-to-r from-red-50 to-red-100 text-red-600">
-                      {project.status}
-                    </span>
-                    {project.repoLink && (
-                      <a 
-                        href={project.repoLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-sm font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors flex items-center gap-1"
-                      >
-                        <CodeBracketIcon className="h-4 w-4" />
-                        Code
-                      </a>
-                    )}
-                    {project.demoLink && (
-                      <a 
-                        href={project.demoLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-sm font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors flex items-center gap-1"
-                      >
-                        <GlobeAltIcon className="h-4 w-4" />
-                        Live Demo
-                      </a>
-                    )}
-                  </div>
-                  
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                    {project.title}
-                  </h2>
-                  
-                  <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                    {project.description}
-                  </p>
-                  
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-3 mb-8">
-                    {project.tags.map((tag, tagIndex) => (
-                      <motion.span
-                        key={tagIndex}
-                        className="text-sm px-3 py-1.5 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        {tag}
-                      </motion.span>
-                    ))}
-                  </div>
-                  
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="text-xs px-2.5 py-1 rounded-full bg-white border border-gray-200 text-gray-700 shadow-inner"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Project Images */}
-                <div className="w-full lg:w-1/2">
-                  <div className="grid grid-cols-12 gap-4 lg:gap-6">
-                    {/* Main Large Image */}
-                    <motion.div 
-                      className="col-span-12 lg:col-span-8 relative overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-red-50 via-gray-50 to-blue-50"
-                      whileHover={{ scale: 0.98 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                    >
-                      <div className="aspect-[4/3]">
-                        <img
-                          src={project.images[0]}
-                          alt={`${project.title} main view`}
-                          className="w-full h-full object-contain p-3 transform group-hover:scale-105 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 via-transparent to-white/5 pointer-events-none"></div>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <button className="text-white bg-black/80 hover:bg-black px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2">
-                          <EyeIcon className="h-4 w-4" />
-                          View Project
-                        </button>
-                      </div>
-                    </motion.div>
-                    
-                    {/* Two Smaller Images Stack */}
-                    <div className="col-span-12 lg:col-span-4 grid grid-cols-1 gap-4 lg:gap-6">
-                      {project.images.slice(1).map((image, imageIndex) => (
-                        <motion.div 
-                          key={imageIndex}
-                          className="relative overflow-hidden rounded-xl shadow-lg bg-gradient-to-br from-blue-50 via-gray-50 to-red-50"
-                          whileHover={{ scale: 0.95 }}
-                          transition={{ type: "spring", stiffness: 400 }}
-                        >
-                          <div className="aspect-square">
-                            <img
-                              src={image}
-                              alt={`${project.title} detail ${imageIndex + 1}`}
-                              className="w-full h-full object-contain p-3 transform group-hover:scale-110 transition-transform duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 via-transparent to-white/5 pointer-events-none"></div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
+              {/* Project Header (Mobile) */}
+              <div className="lg:hidden mb-8">
+                <span className="text-accent-red font-outfit font-medium text-sm tracking-widest uppercase mb-2 block">
+                  {project.projectType}
+                </span>
+                <h3 className="text-4xl font-fraunces font-bold text-premium-black mb-4">{project.title}</h3>
+                <p className="text-premium-gray font-outfit font-light leading-relaxed mb-6">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech, i) => (
+                    <span key={i} className="text-sm font-outfit text-premium-black border border-premium-gray/20 px-3 py-1 rounded-full">{tech}</span>
+                  ))}
                 </div>
               </div>
 
-              {/* Separator Line (except for last item) */}
-              {index !== projects.length - 1 && (
-                <div className="absolute bottom-[-64px] left-0 right-0 flex justify-center">
-                  <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+              {/* Large Hero Image */}
+              <div className="relative aspect-[16/9] lg:aspect-[21/9] overflow-hidden rounded-2xl bg-premium-gray/5 group-hover:shadow-2xl transition-all duration-700">
+                <div className="absolute inset-0 bg-premium-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                  <motion.button 
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-premium-black px-8 py-4 rounded-full font-outfit font-medium text-lg flex items-center gap-2"
+                  >
+                    View Case Study <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+                  </motion.button>
                 </div>
-              )}
+                <img
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                />
+              </div>
+
+              {/* Project Info (Desktop) */}
+              <div className="hidden lg:grid grid-cols-12 gap-8 mt-12 items-start">
+                <div className="col-span-4">
+                  <h3 className="text-5xl font-fraunces font-bold text-premium-black leading-tight mb-6">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="text-sm font-outfit font-medium text-premium-gray uppercase tracking-wider">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="col-span-4">
+                  <p className="text-xl text-premium-gray font-outfit font-light leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="col-span-4 flex flex-col items-end gap-6">
+                  <div className="flex flex-wrap justify-end gap-2">
+                    {project.techStack.map((tech, i) => (
+                      <span key={i} className="text-sm font-outfit text-premium-black border border-premium-gray/20 px-4 py-2 rounded-full">{tech}</span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    {project.repoLink && (
+                      <a href={project.repoLink} className="text-premium-black hover:text-accent-red font-outfit font-medium transition-colors">GitHub</a>
+                    )}
+                    {project.demoLink && (
+                      <a href={project.demoLink} className="text-premium-black hover:text-accent-red font-outfit font-medium transition-colors">Live Demo</a>
+                    )}
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

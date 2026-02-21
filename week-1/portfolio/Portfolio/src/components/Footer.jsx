@@ -129,7 +129,7 @@ const Footer = () => {
               Resources
             </h4>
             <ul className="space-y-3">
-              {["Resume", "Blog", "Case Studies", "Testimonials"].map(
+              {["Resume"].map(
                 (item, index) => (
                   <motion.li
                     key={item}
@@ -138,7 +138,9 @@ const Footer = () => {
                     transition={{ delay: 0.2 + index * 0.1 }}
                   >
                     <a
-                      href={`/${item.toLowerCase().replace(" ", "-")}`}
+                      href="https://drive.google.com/file/d/1eIz-AmPkZwa8AH6UajOQFkjukgW83TPb/view?usp=drivesdk"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-600 hover:text-red-600 text-sm transition-colors flex items-center gap-2"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -220,6 +222,7 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-6">
+            {/* 
             <a
               href="/privacy"
               className="text-sm text-gray-600 hover:text-red-600 transition-colors"
@@ -232,6 +235,7 @@ const Footer = () => {
             >
               Terms of Service
             </a>
+             */}
           </div>
         </motion.div>
       </div>

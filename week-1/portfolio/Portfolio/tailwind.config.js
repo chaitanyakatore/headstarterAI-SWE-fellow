@@ -10,6 +10,14 @@ export default {
       fontFamily: {
         'playfair': ['Playfair Display', 'serif'],
         'poppins': ['Poppins', 'sans-serif'],
+        'outfit': ['Outfit', 'sans-serif'],
+        'fraunces': ['Fraunces', 'serif'],
+      },
+      colors: {
+        'premium-black': '#0a0a0a',
+        'premium-gray': '#1a1a1a',
+        'off-white': '#fcfcfc',
+        'accent-red': '#ff3333',
       },
       keyframes: {
         fadeOut: {

@@ -11,6 +11,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import LoadingScreen from "./components/LoadingScreen";
+import Contact from "./components/Contact";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <div id="projects">
         <ProjectsSection />
       </div>
+      <Contact />
     </>
   );
 };

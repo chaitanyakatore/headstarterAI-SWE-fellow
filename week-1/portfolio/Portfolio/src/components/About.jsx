@@ -184,10 +184,10 @@ const About = () => {
           className="relative"
         >
           {/* Image Grid */}
-          <div className="grid grid-cols-6 grid-rows-8 gap-4 h-[600px]">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-6 lg:grid-rows-8 lg:h-[600px]">
             {/* Large Image 1 */}
             <motion.div
-              className="col-span-4 col-start-1 row-span-4 row-start-1 relative overflow-hidden rounded-2xl"
+              className="col-span-2 row-span-2 lg:col-span-4 lg:col-start-1 lg:row-span-4 lg:row-start-1 relative overflow-hidden rounded-2xl aspect-square lg:aspect-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -200,7 +200,7 @@ const About = () => {
 
             {/* Small Image 1 */}
             <motion.div
-              className="col-span-2 col-start-5 row-span-2 row-start-1 relative overflow-hidden rounded-2xl"
+              className="col-span-1 lg:col-span-2 lg:col-start-5 lg:row-span-2 lg:row-start-1 relative overflow-hidden rounded-2xl aspect-square lg:aspect-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -213,7 +213,7 @@ const About = () => {
 
             {/* Small Image 2 */}
             <motion.div
-              className="col-span-2 col-start-5 row-span-2 row-start-3 relative overflow-hidden rounded-2xl"
+              className="col-span-1 lg:col-span-2 lg:col-start-5 lg:row-span-2 lg:row-start-3 relative overflow-hidden rounded-2xl aspect-square lg:aspect-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -226,7 +226,7 @@ const About = () => {
 
             {/* Medium Image 1 */}
             <motion.div
-              className="col-span-3 col-start-1 row-span-3 row-start-5 relative overflow-hidden rounded-2xl"
+              className="col-span-1 lg:col-span-3 lg:col-start-1 lg:row-span-3 lg:row-start-5 relative overflow-hidden rounded-2xl aspect-square lg:aspect-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -239,7 +239,7 @@ const About = () => {
 
             {/* Medium Image 2 */}
             <motion.div
-              className="col-span-3 col-start-4 row-span-3 row-start-5 relative overflow-hidden rounded-2xl"
+              className="col-span-1 lg:col-span-3 lg:col-start-4 lg:row-span-3 lg:row-start-5 relative overflow-hidden rounded-2xl aspect-square lg:aspect-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -249,9 +249,6 @@ const About = () => {
                 className="w-full h-full object-cover"
               />
             </motion.div>
-
-            {/* Small Image 3 */}
-            
           </div>
 
           {/* Decorative Elements */}
@@ -262,11 +259,11 @@ const About = () => {
 
       {/* Scrolling Sections */}
       <div className="relative overflow-hidden">
-        {/* Blog Section */}
-        <ScrollingSection title="Latest Blog Posts" items={blogs} type="blog" />
+        {/* Blog Section - Coming Soon */}
+        {/* <ScrollingSection title="Latest Blog Posts" items={blogs} type="blog" /> */}
         
-        {/* Books Section */}
-        <ScrollingSection title="Books I've Read" items={books} type="book" />
+        {/* Books Section - Coming Soon */}
+        {/* <ScrollingSection title="Books I've Read" items={books} type="book" /> */}
         
         {/* Travel Section */}
         <ScrollingSection title="Places I've Visited" items={travelPlaces} type="travel" />
