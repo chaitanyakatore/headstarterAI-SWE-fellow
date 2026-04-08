@@ -37,20 +37,20 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-background overflow-hidden border-t border-border">
+    <section id="testimonials" className="py-24 bg-[#F8FAFC] overflow-hidden border-t border-slate-100">
       <div className="container px-4 md:px-6 mx-auto mb-12 text-center">
-        <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+        <span className="text-[#D4A853] font-bold tracking-wider uppercase text-sm mb-4 block">
           Trusted Worldwide
-        </div>
-        <h2 className="text-3xl font-bold tracking-tighter md:text-5xl">
+        </span>
+        <h2 className="text-3xl font-extrabold tracking-tight md:text-5xl text-[#0A1628]">
           What Our Partners Say
         </h2>
-        <p className="max-w-[800px] text-muted-foreground md:text-xl mx-auto mt-4">
+        <p className="max-w-[700px] text-slate-500 md:text-lg mx-auto mt-4 leading-relaxed">
           We build lasting relationships based on trust, efficiency, and proven results across continents.
         </p>
       </div>
 
-      <div className="flex flex-col items-center justify-center relative w-full pt-8">
+      <div className="flex flex-col items-center justify-center relative w-full pt-4">
         <InfiniteMovingCards
           items={testimonials}
           direction="right"

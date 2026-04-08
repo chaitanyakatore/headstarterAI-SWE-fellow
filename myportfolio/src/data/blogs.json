@@ -1,0 +1,37 @@
+[
+  {
+    "id": "blog-1",
+    "title": "Migrating Tests to Jest: A Practical Guide",
+    "snippet": "Learn how I replaced Vitest with Jest, configured it for ES Modules, and smoothly refactored a large test suite.",
+    "date": "2025-12-07",
+    "link": "#"
+  },
+  {
+    "id": "blog-2",
+    "title": "Building Premium UIs with Vanilla CSS",
+    "snippet": "Why sometimes stepping away from utility-first frameworks like Tailwind can lead to more tailored, high-performance designs.",
+    "date": "2025-11-22",
+    "link": "#"
+  },
+  {
+    "id": "blog-3",
+    "title": "Refactoring Backend Node.js to MVC",
+    "snippet": "A deep dive into restructuring tangled API logic into a clean, maintainable MVC architecture.",
+    "date": "2025-12-29",
+    "link": "#"
+  },
+  {
+    "id": "blog-4",
+    "title": "Open Source: The Path to Mastery",
+    "snippet": "My thoughts on diving into massively popular codebases like React and Next.js and why you should do it too.",
+    "date": "2026-01-14",
+    "link": "#"
+  },
+  {
+    "id": "blog-5",
+    "title": "Aesthetics in Software",
+    "snippet": "How micro-interactions and careful empty spaces trick the brain into high-trust and why PMs love it.",
+    "date": "2026-03-05",
+    "link": "#"
+  }
+]

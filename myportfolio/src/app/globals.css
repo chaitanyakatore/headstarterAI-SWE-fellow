@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FAFAFA; /* Organic Cream Paper */
+    --foreground: #000000;
+    --purple-accent: #E11D48; /* Azuki Crimson */
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: inherit;
+    /* Azuki Red/Gold vignette glow */
+    background-image: 
+      radial-gradient(circle at 10% 40%, rgba(225, 29, 72, 0.12), transparent 35%),
+      radial-gradient(circle at 90% 20%, rgba(245, 158, 11, 0.10), transparent 40%),
+      radial-gradient(circle at 50% 90%, rgba(234, 179, 8, 0.08), transparent 40%);
+    background-attachment: fixed;
+  }
+}

@@ -67,73 +67,101 @@
 
 :root {
   --radius: 0.5rem;
-  --background: 0 0% 100%;
-  --foreground: 240 10% 4%;
+
+  /* Midnight Trust — Deep Navy + Warm Gold */
+  --accent-gold: #D4A853;
+  --accent-gold-dark: #B8922E;
+  --accent-gold-light: #F5E6C8;
+  --navy: #0A1628;
+  --navy-light: #1A2940;
+
+  --background: 210 40% 98%;   /* Slate-50 (#F8FAFC) */
+  --foreground: 215 25% 13%;   /* Very dark slate */
+
   --card: 0 0% 100%;
-  --card-foreground: 240 10% 4%;
+  --card-foreground: 215 25% 13%;
+
   --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 4%;
-  --primary: 152 76% 36%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 152 30% 96%;
-  --secondary-foreground: 152 76% 36%;
-  --muted: 240 5% 96%;
-  --muted-foreground: 240 4% 46%;
-  --accent: 152 30% 96%;
-  --accent-foreground: 152 76% 36%;
+  --popover-foreground: 215 25% 13%;
+
+  --primary: 40 55% 58%;       /* Warm Gold (#D4A853) */
+  --primary-foreground: 215 60% 8%;  /* Dark navy text on gold buttons */
+
+  --secondary: 220 60% 10%;   /* Deep Navy */
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 214 32% 91%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 40 55% 58%;
+  --accent-foreground: 215 60% 8%;
+
   --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-  --border: 240 6% 90%;
-  --input: 240 6% 90%;
-  --ring: 152 76% 36%;
-  --chart-1: 152 76% 36%;
-  --chart-2: 210 100% 50%;
-  --chart-3: 30 100% 50%;
-  --chart-4: 280 100% 50%;
-  --chart-5: 350 100% 50%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 40 55% 58%;
+
+  --chart-1: 40 55% 58%;
+  --chart-2: 220 60% 10%;
+  --chart-3: 214 32% 91%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 280 65% 60%;
+
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 240 10% 4%;
-  --sidebar-primary: 152 76% 36%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 152 30% 96%;
-  --sidebar-accent-foreground: 152 76% 36%;
-  --sidebar-border: 240 6% 90%;
-  --sidebar-ring: 152 76% 36%;
+  --sidebar-foreground: 215 25% 13%;
+  --sidebar-primary: 40 55% 58%;
+  --sidebar-primary-foreground: 215 60% 8%;
+  --sidebar-accent: 210 40% 96%;
+  --sidebar-accent-foreground: 215 25% 13%;
+  --sidebar-border: 214 32% 91%;
+  --sidebar-ring: 40 55% 58%;
 }
 
 .dark {
-  --background: 240 10% 4%;
+  --background: 220 60% 7%;
   --foreground: 0 0% 98%;
-  --card: 240 10% 4%;
+
+  --card: 220 55% 10%;
   --card-foreground: 0 0% 98%;
-  --popover: 240 10% 4%;
+
+  --popover: 220 60% 7%;
   --popover-foreground: 0 0% 98%;
-  --primary: 152 76% 36%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 152 20% 15%;
+
+  --primary: 40 55% 58%;
+  --primary-foreground: 220 60% 7%;
+
+  --secondary: 220 40% 16%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 240 5% 15%;
-  --muted-foreground: 240 5% 65%;
-  --accent: 152 20% 15%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 0 0% 100%;
-  --border: 240 5% 15%;
-  --input: 240 5% 15%;
-  --ring: 152 76% 36%;
-  --chart-1: 152 76% 36%;
-  --chart-2: 210 100% 50%;
-  --chart-3: 30 100% 50%;
-  --chart-4: 280 100% 50%;
-  --chart-5: 350 100% 50%;
-  --sidebar-background: 240 10% 4%;
+
+  --muted: 220 30% 18%;
+  --muted-foreground: 220 20% 60%;
+
+  --accent: 40 55% 58%;
+  --accent-foreground: 220 60% 7%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 220 30% 18%;
+  --input: 220 30% 18%;
+  --ring: 40 55% 58%;
+
+  --chart-1: 40 55% 58%;
+  --chart-2: 220 55% 50%;
+  --chart-3: 160 60% 45%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 280 65% 60%;
+
+  --sidebar-background: 220 60% 7%;
   --sidebar-foreground: 0 0% 98%;
-  --sidebar-primary: 152 76% 36%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 152 20% 15%;
+  --sidebar-primary: 40 55% 58%;
+  --sidebar-primary-foreground: 220 60% 7%;
+  --sidebar-accent: 220 40% 16%;
   --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-border: 240 5% 15%;
-  --sidebar-ring: 152 76% 36%;
+  --sidebar-border: 220 30% 18%;
+  --sidebar-ring: 40 55% 58%;
 }
 
 @layer base {
@@ -143,4 +171,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
 }

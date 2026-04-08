@@ -1,0 +1,47 @@
+[
+  {
+    "id": "project-foo",
+    "title": "Next.js Core Contributions",
+    "description": "Contributed to Next.js open source framework by fixing critical routing issues in the App Router and expanding documentation, which benefited over 100,000 developers globally.",
+    "tags": ["React", "Next.js", "Open Source"],
+    "link": "https://github.com/vercel/next.js",
+    "image": "",
+    "type": "Open Source"
+  },
+  {
+    "id": "project-1",
+    "title": "Habit Tracker MVP",
+    "description": "Built a robust Habit Tracker using Node.js and MongoDB, which improved data retrieval speeds by 30% by implementing a refactored MVC backend architecture.",
+    "tags": ["Node.js", "Express", "React", "MongoDB"],
+    "link": "#",
+    "image": "/images/project-1.jpg",
+    "type": "Personal Project"
+  },
+  {
+    "id": "project-2",
+    "title": "QSR Dashboard Suite",
+    "description": "Developed a multi-page operational dashboard for Quick Service Restaurants using Next.js, which reduced inventory tracking time by 40% and streamlined daily staff tasks.",
+    "tags": ["Next.js", "TypeScript", "TailwindCSS"],
+    "link": "#",
+    "image": "/images/project-2.jpg",
+    "type": "Personal Project"
+  },
+  {
+    "id": "project-3",
+    "title": "AdhyaLakshmi Platform",
+    "description": "Engineered a premium showcase website using React and GSAP, which increased user engagement duration by 25% through dynamic infinite scrolling carousels.",
+    "tags": ["React", "Vanilla CSS", "GSAP"],
+    "link": "#",
+    "image": "/images/project-3.jpg",
+    "type": "Client Project"
+  },
+  {
+    "id": "project-4",
+    "title": "Pinecone AI Wrappers",
+    "description": "Published an open source utility wrapper for Pinecone Vector DB, abstracting redundant API calls into a clean TypeScript SDK used by multiple Headstarter Fellows.",
+    "tags": ["TypeScript", "Pinecone", "AI"],
+    "link": "#",
+    "image": "",
+    "type": "Open Source"
+  }
+]

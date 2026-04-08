@@ -1,0 +1,17 @@
+{
+  "name": "Chaitanya Katore",
+  "title": "Software Developer",
+  "headline": "Software Developer | Specializing in full-stack web and AI applications",
+  "tagline": "Crafting robust, scalable, and premium digital experiences.",
+  "about": "I am a passionate Software Developer with a strong foundation in modern web technologies. I specialize in building performant applications that deliver intuitive user experiences. My approach combines technical excellence with a keen eye for simple, clean design.",
+  "email": "hello@example.com",
+  "socials": [
+    { "name": "GitHub", "url": "https://github.com/chaitanyakatore" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/chaitanyakatore" }
+  ],
+  "skills": {
+    "Frontend": ["React", "Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
+    "Backend": ["Node.js", "Express", "Python", "SQL", "MongoDB"],
+    "Tools": ["Git", "Docker", "Postman", "OpenAI API"]
+  }
+}
